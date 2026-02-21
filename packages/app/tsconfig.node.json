@@ -1,0 +1,27 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "es2020",
+    "lib": ["es2020"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "outDir": "./dist",
+    "composite": false,
+    "verbatimModuleSyntax": true,
+    "types": ["@cloudflare/vitest-pool-workers"]
+  },
+  "files": [
+    "./vite.config.ts",
+    "./drizzle.config.ts",
+    "./env.d.ts",
+    "./node-env.d.ts",
+    "./vitest.config.ts",
+    "./vitest.setup.ts"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.backend.tsbuildinfo",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "rootDir": "./",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "composite": true,
+    "verbatimModuleSyntax": true,
+    "types": [
+      "@cloudflare/workers-types/experimental",
+      "vitest/globals",
+      "@cloudflare/vitest-pool-workers"
+    ],
+    "paths": {
+      "@backend/*": ["./*"]
+    }
+  },
+  "include": ["./**/*.ts", "../vite-env.d.ts", "../env.d.ts"],
+  "exclude": ["dist", "node_modules"]
+}

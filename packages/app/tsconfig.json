@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./frontend/tsconfig.json"
+    },
+    {
+      "path": "./backend/tsconfig.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@frontend/*": ["./frontend/*"]
+    }
+  }
+}

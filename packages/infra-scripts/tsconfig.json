@@ -1,0 +1,22 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "noEmit": true,
+    "outDir": "./dist",
+    "composite": true,
+    "verbatimModuleSyntax": true,
+    "types": ["vitest/globals"],
+    "paths": {
+      "src/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "bin", "./vitest.config.ts"]
+}

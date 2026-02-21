@@ -1,0 +1,88 @@
+{
+  "folders": [
+    {
+      "path": "packages/app/frontend",
+    },
+    {
+      "path": "packages/app/backend",
+    },
+    {
+      "name": "(app)",
+      "path": "./packages/app",
+    },
+    {
+      "name": "infra",
+      "path": "./infra",
+    },
+    {
+      "name": "infra-scripts",
+      "path": "./packages/infra-scripts",
+    },
+    {
+      "name": "workflows",
+      "path": ".github/workflows",
+    },
+    {
+      "name": "docs",
+      "path": "./docs",
+    },
+    {
+      "name": "(root)",
+      "path": "./",
+    },
+  ],
+  "settings": {
+    "typescript.format.enable": false,
+    "eslint.enable": true,
+    "eslint.format.enable": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always",
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[terraform]": {
+      "editor.defaultFormatter": "hashicorp.terraform",
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "files.associations": {
+      "*.toml": "ini",
+      ".envrc*": "dotenv",
+      ".dev.vars*": "dotenv",
+    },
+    "files.readonlyInclude": {
+      "**/routeTree.gen.ts": true,
+    },
+    "files.watcherExclude": {
+      "**/routeTree.gen.ts": true,
+    },
+    "search.exclude": {
+      "**/routeTree.gen.ts": true,
+      "**/.terraform": true,
+      "**/dist": true,
+      "**/dist-app": true,
+    },
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "hashicorp.terraform",
+    ],
+  },
+}

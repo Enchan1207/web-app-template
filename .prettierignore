@@ -1,0 +1,5 @@
+package.json
+pnpm-lock.yaml
+*.tf
+**/drizzle/*
+**/components/ui/*

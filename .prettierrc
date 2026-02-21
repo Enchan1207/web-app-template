@@ -1,0 +1,14 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "printWidth": 80,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": "**/wrangler.jsonc",
+      "options": {
+        "trailingComma": "none"
+      }
+    }
+  ]
+}
