@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "web-app-template",
-  "compatibility_date": "2025-11-25",
+  "compatibility_date": "2026-01-20",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./backend/index.ts",
   "preview_urls": false,
