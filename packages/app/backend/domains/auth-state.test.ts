@@ -11,7 +11,7 @@ describe('createAuthState', () => {
 
       beforeAll(() => {
         vi.useFakeTimers()
-        const now = new Date('2026-02-22T10:00:00Z')
+        const now = dayjs('2026-02-22T10:00:00Z').toDate()
         vi.setSystemTime(now)
 
         const expiresAt = dayjs().add(10, 'minutes')
@@ -45,7 +45,7 @@ describe('createAuthState', () => {
 
       beforeAll(() => {
         vi.useFakeTimers()
-        const now = new Date('2026-02-22T10:00:00Z')
+        const now = dayjs('2026-02-22T10:00:00Z').toDate()
         vi.setSystemTime(now)
 
         const expiresAt = dayjs().add(30, 'minutes')
