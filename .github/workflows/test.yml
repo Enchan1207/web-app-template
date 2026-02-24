@@ -1,4 +1,4 @@
-name: lint
+name: test
 
 on:
   push:
@@ -6,22 +6,26 @@ on:
       - 'packages/**'
       - 'package.json'
       - '**/package.json'
-      - 'eslint.config.mjs'
   pull_request:
     paths:
       - 'packages/**'
       - 'package.json'
       - '**/package.json'
-      - 'eslint.config.mjs'
     branches:
       - main
 
 concurrency:
-  group: lint-${{ github.workflow }}-${{ github.ref }}
+  group: test-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  lint:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - app
+          - infra-scripts
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -39,8 +43,8 @@ jobs:
       - name: install
         run: pnpm i --frozen-lockfile
 
-      - name: check format
-        run: pnpm prettier
+      - name: build
+        run: pnpm -F ${{ matrix.package }} build
 
-      - name: lint
-        run: pnpm lint
+      - name: test
+        run: pnpm -F ${{ matrix.package }} test

@@ -2,6 +2,7 @@
     "name": "infra-scripts",
     "type": "module",
     "scripts": {
+        "build": "tsc",
         "test": "vitest",
         "update-env": "tsx bin/update-env.ts",
         "update-wrangler": "tsx bin/update-wrangler.ts"
